@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: kustomization
+metadata:
+  name: ${NAMESPACE}-flux-kustomization
+spec:
+  path: ./overlays/prod/aws/east/account_name
+  sourceRef:
+     kind: GitRepository
+     name: ${NEWREPONAME}
+----------------
+
+apiVersion: v2
+kind: GitRepository
+metadata:
+  name: ${NEWREPONAME}
+spec:
+  url: "ssh://git@github.com:vinayreddy05/${NEWREPONAME}.git"
+
+

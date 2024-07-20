@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: GitRepository
+metadata:
+   namespace: flux
+spec:
+   url: "ssh://git@github.com:vinayreddy05/${NEWREPONAME}.git"
